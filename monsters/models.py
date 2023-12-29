@@ -1,6 +1,7 @@
 from django.db import models
 
 class Monster(models.Model):
+    #import pdb; pdb.set_trace()
     name = models.CharField(max_length=255)
     size = models.CharField(max_length=255)
     type = models.CharField(max_length=255)

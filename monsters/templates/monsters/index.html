@@ -2,6 +2,34 @@
 
 <ul>
   {% for monster in monsters %}
-    <li>{{ monster.name }} - {{ monster.type }}</li>
+    <li>
+      <span>{{ monster.name }}</span><br>
+      - Size: <span>{{ monster.size }}</span><br>
+      - Type: <span>{{ monster.type }}</span><br>
+      - Armor Class: <span>{{ monster.armor_class }}</span><br>
+      - Hit Points: <span>{{ monster.hit_points }}</span><br>
+      - Strength: <span>{{ monster.strength }}</span><br>
+      - Dexterity: <span>{{ monster.dexterity }}</span><br>
+      - Constitution: <span>{{ monster.constitution }}</span><br>
+      - Intelligence: <span>{{ monster.intelligence }}</span><br>
+      - Wisdom: <span>{{ monster.wisdom }}</span><br>
+      - Charisma: <span>{{ monster.charisma }}</span><br>
+      - Skills: <span>{{ monster.skills }}</span><br>
+      - Damage Vulnerabilities: <span>{{ monster.damage_vulnerabilties }}</span><br>
+      - Damage Resistances: <span>{{ monster.damage_resistances }}</span><br>
+      - Damage Immunities: <span>{{ monster.damage_immunities }}</span><br>
+      - Condition Immunities: <span>{{ monster.condition_immunities}}</span><br><br>
+      - Actions: <span>{{ monster.actions }}</span><br>
+      - Special Abilities <span>{{ monster.special_abilites }}</span><br>
+      - Spell List <span>{{ monster.spell_list }}</span><br>
+      - Skills: <span>{{ monster.skills }}</span><br><br>
+
+      {% if monster.img_main %}
+        <img src="{{ monster.img_main }}" alt="{{ monster.name }} Image">
+      {% else %}
+        <!-- Optional: Placeholder image or alternative content -->
+        <span>No image available</span>
+      {% endif %}
+    </li>
   {% endfor %}
 </ul>
