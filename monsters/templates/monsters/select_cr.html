@@ -1,0 +1,8 @@
+<h1>Select Challenge Rating (CR)</h1>
+
+<form action="{% url 'monsters:index' %}" method="GET">
+    <label for="cr">Enter Challenge Rating (1-20):</label>
+    <input type="number" name="cr" id="cr" min="1" max="20" required>
+    <br>
+    <input type="submit" value="Submit">
+</form>

@@ -16,7 +16,7 @@ class Monster(models.Model):
     wisdom = models.IntegerField()
     charisma = models.IntegerField()
     skills = models.JSONField()
-    damage_vulnerabilities = models.CharField(max_length=255)
+    damage_vulnerabilities = models.CharField(max_length=255, default="none", blank=True)
     damage_resistances = models.CharField(max_length=255)
     damage_immunities = models.CharField(max_length=255)
     condition_immunities = models.CharField(max_length=255)
